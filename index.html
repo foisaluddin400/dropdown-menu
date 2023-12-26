@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Document</title>
+
+    <style>
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .dropdown-img{
+            background: url(img/pexels-ekaterina-bolovtsova-4672741.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .dropdown-menu{
+            background-color: #b71540;
+            padding: 16px;
+            text-align: center;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            
+        }
+        .drop-head{
+            width: 15%;
+            color: white;
+            font-size: 20px;
+        }
+        .drop{
+            width: 80%;
+            margin-top: 4px;
+            
+            
+        }
+        .drop-icon{
+            width: 20%;
+            color: white;
+            font-size: 30px;
+            display: none;
+        }
+        .hide{
+            display: none;
+        }
+        .dropdown-menu a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            padding: 20px 17px 26px 17px;
+            transition: 0.4s;
+
+            
+        }
+        .dropdown-menu a:hover{
+            background-color: orangered;
+        }
+        .dropdown-content{
+            display: inline;
+            position: relative;
+        }
+        .dropdown-container{
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            background-color: #b71540;
+            min-width: 220px;
+            text-align: left;
+            display: none;
+            transition: 0.4s;
+            
+        }
+        .dropdown-content:hover .dropdown-container{
+            display: block;
+        }
+        .dropdown-container a{
+            display: block;
+            border-top: 1px solid rgb(255, 0, 0);
+        }
+        .dropdown-content-1{
+            position: relative;
+        }
+        .dropdown-container-1{
+            position: absolute;
+            left: 221px;
+            background-color: #b71540;
+            min-width: 200px;
+            top: 0px;
+            display: none;
+        }
+        .dropdown-content-1:hover .dropdown-container-1{
+            display: block;
+        }
+        
+        .drop-1{
+            display: none;
+        }
+
+        @media screen and (max-width:990px) {
+            .drop{
+                display: none;
+            }
+            .drop-icon{
+                display: inline-block;
+                cursor: pointer;
+            }
+            .drop-1{
+                display: block;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(255, 255, 255);
+                width: 30%;
+                float: right;
+                box-shadow: -0px 4px 12px rgba(199, 199, 199, 0.834);
+                
+            }
+            .drop-1 a{
+            text-decoration: none;
+            color: rgb(17, 17, 17);
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid rgb(233, 233, 233);
+            
+
+            }
+            .dropdown-img{
+                width: 100%;
+                background-size: cover;
+            }
+        }
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <div class="dropdown-img">
+        <div class="dropdown-menu">
+            <div class="drop-head">
+                <h2>PINTER</h2>
+            </div>
+            <div class="drop">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <div class="dropdown-content">
+                    <a href="#">Services ></a>
+                    <div class="dropdown-container">
+                        <a href="#">Web Design</a>
+                        <a href="#">Graphics Design</a>
+                        <div class="dropdown-content-1">
+                            <a href="#">Degital market ></a>
+                            <div class="dropdown-container-1">
+                                <a href="#">Sector-1</a>
+                                <a href="#">Sector-2</a>
+                                <a href="#">Sector-3</a>
+                            </div>
+                        </div>
+                        <a href="#">Spoken English</a>
+                    </div>
+                </div>
+                <a href="#">Clients</a>
+                <a href="#">Reveiw</a>
+                <a href="#">Training</a>
+                <a href="#">Contacy Me</a>
+            </div>
+            <div class="drop-icon">
+                <div class="show">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div class="hide">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop-1">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            
+            <a href="#">Services ></a>
+            
+            
+            <a href="#">Clients</a>
+            <a href="#">Reveiw</a>
+            <a href="#">Training</a>
+            <a href="#">Contacy Me</a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+
+
+
+</body>
+</html>
